@@ -1,0 +1,15 @@
+@value colors: "../../../../common/styles/colors.css";
+@value mainColor, barColor from colors;
+
+.searchBar {
+  background-color: barColor;
+  border: 0;
+  border-bottom: 1.5rem solid mainColor;
+  color: white;
+  outline: 0;
+  padding: 1vw;
+}
+
+::placeholder {
+  text-align: right;
+}

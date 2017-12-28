@@ -1,0 +1,19 @@
+@value sizes: "../common/styles/elements.css";
+@value headerHeight, movieItemHeight from sizes;
+
+.header {
+  composes: basicContainer from "../common/styles/elements.css";
+  background-image: url('./header.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  flex-direction: column;
+  height: headerHeight;
+  justify-content: space-between;
+}
+
+.movieHeader {
+  composes: header;
+  height: calc(headerHeight + movieItemHeight);
+  padding-left: 0;
+  padding-right: 0;
+}

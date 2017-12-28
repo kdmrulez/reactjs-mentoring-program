@@ -1,0 +1,25 @@
+@value sizes: "../../common/styles/elements.css";
+@value horizontalPadding, verticalPadding from sizes;
+
+.topRow{
+  display: flex;
+  justify-content: space-between;
+  padding: verticalPadding horizontalPadding;
+}
+
+.container {
+  display: flex;
+  flex: 90%;
+  padding: 1vh 2vw ;
+}
+
+.img {
+  height:100%;
+  width:30%;
+}
+
+.movieDescription {
+  color: white;
+  flex-grow: 3;
+  overflow: auto;
+}

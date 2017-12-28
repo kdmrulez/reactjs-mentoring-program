@@ -1,0 +1,31 @@
+@value colors: "../styles/colors.css";
+@value buttonsDefaultTextColor, mainColor from colors;
+
+.defaultStyle {
+  background-color: grey;
+  border: 0;
+  color: buttonsDefaultTextColor;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
+  margin: 5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.selected {
+  composes: defaultStyle;
+  background-color: mainColor;
+}
+
+.extended {
+  composes: selected;
+  width: 8vw;
+}
+
+.extendedReverseColors {
+  composes: extended;
+  background-color: white;
+  color: mainColor;
+  font-weight: bold;
+}

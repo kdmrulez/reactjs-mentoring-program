@@ -1,0 +1,63 @@
+@value sizes: "../common/styles/elements.css";
+@value movieItemHeight, itemPadding, verticalPadding from sizes;
+
+.container {
+  composes: basicContainer from "../common/styles/elements.css";
+  flex-wrap: wrap;
+  padding: itemPadding;
+}
+
+.item {
+  box-sizing: border-box;
+  display:flex;
+  flex-direction: column;
+  height: movieItemHeight;
+  justify-content: center;
+  padding: itemPadding;
+  width: 33.33%;
+}
+
+.imgContainer{
+  align-items: center;
+  display:flex;
+  justify-content: center;
+  height:100%;
+  width: 100%;
+}
+
+.img {
+  height: 90%;
+  width: 50%;
+}
+
+.detailsStyle {
+  display:flex;
+  flex-direction: column;
+}
+
+.detailsRowStyle {
+  align-items: center;
+  display:flex;
+  font-size: 12rem;
+  font-weight: bold;
+  justify-content: space-between;
+  padding: 5rem 5rem 0 5rem;
+}
+
+.titleStyle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.relaseDateBoxStyle {
+  border: 1rem solid black;
+  box-sizing: border-box;
+  padding: 1rem 4rem;
+}
+
+.noMoviesStyle{
+  color: grey;
+  font-size: 30rem;
+  margin:auto;
+}

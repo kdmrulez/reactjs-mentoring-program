@@ -1,0 +1,14 @@
+@value colors: "../styles/colors.css"
+@value mainColor from colors
+
+@value sizes: "../styles/elements.css"
+@value basicFontSize from sizes
+
+.title {
+  color: mainColor;
+  font-size: basicFontSize;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
