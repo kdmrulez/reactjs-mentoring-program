@@ -15,7 +15,7 @@ const mapResponseToMovies = (responseJSON) => {
   }, []);
   return movies.map(movie => ({
     // id constructed this way, because API dont return unique values
-    id: `${movie.id}${movie.director}${movie.title}`,
+    id: `${movie.id}${movie.director}${movie.title}`.replace(/\s+/, ''),
     title: movie.title,
     director: movie.director,
     rating: movie.vote_average,

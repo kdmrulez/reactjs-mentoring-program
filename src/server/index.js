@@ -7,10 +7,11 @@ const React = require('react');
 const { Provider } = require('react-redux');
 const { renderToString } = require('react-dom/server');
 const { StaticRouter } = require('react-router-dom');
-const { configureStore, loadState, saveState } = require('../store/configureStore');
 const fs = require('fs');
 const http = require('http');
-const App = require('../../build/static/js/main.b785193b').default;
+const bodyParser = require('body-parser');
+const { configureStore } = require('../store/configureStore');
+const App = require('../../build/static/js/main.48ae6f00.js').default;
 
 const staticFiles = [
   '/static/*',
@@ -20,6 +21,15 @@ const staticFiles = [
 ];
 
 const app = express();
+let state = {
+  fetchMovies: [],
+  fetchMoviesErrors: null,
+  searchBarInput: '',
+  searchBy: 'director',
+  sortBy: 'releaseDate',
+};
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.server = http.createServer(app);
 
 staticFiles.forEach((file) => {
@@ -29,6 +39,10 @@ staticFiles.forEach((file) => {
   });
 });
 
+app.post('/saveState', async (req, res) => {
+  state = req.body;
+  res.status(200).send();
+});
 
 app.get('*', async (req, res) => {
   const htmlFilePath = path.join(__dirname, '../../build', 'index.html');
@@ -41,14 +55,11 @@ app.get('*', async (req, res) => {
       if (context.url) {
         res.redirect(301, context.url);
       } else {
-        const persistedState = loadState();
-        const store = configureStore(persistedState);
-        store.subscribe(() => saveState(store.getState()));
+        const store = configureStore(state);
         const ProviderElement = React.createElement(
           Provider,
           { store },
           React.createElement(App),
-        //  App,
         );
         const StaticRouterElement = React.createElement(
           StaticRouter,

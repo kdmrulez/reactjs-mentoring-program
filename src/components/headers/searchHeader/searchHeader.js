@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import { header } from '../headers.css';
 import SiteTitle from '../../common/siteTitle';

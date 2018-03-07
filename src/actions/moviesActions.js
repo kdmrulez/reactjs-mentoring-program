@@ -1,5 +1,7 @@
+// @flow
+
 import { FETCH_MOVIES_SUCCESS, FETCH_MOVIES_ERRORS } from './actionsTypes';
-import getMoviesByDirector from '../api';
+import { getMoviesByDirector } from '../api';
 import mapResponseToMovies from './actionsUtils';
 
 const fetchMoviesSuccesAction = movies => ({

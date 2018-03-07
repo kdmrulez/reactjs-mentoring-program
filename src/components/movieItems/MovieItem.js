@@ -10,7 +10,9 @@ const MovieItem = ({ movie }) => (
     <Link
       to={`/film/${movie.id}`}
       className={imgContainer}
-      onClick={() => { Scroll.animateScroll.scrollToTop(); }}
+      onClick={() => {
+         Scroll.animateScroll.scrollToTop();
+}}
     >
       <img src={movie.imgSrc} alt="Movie Logo" className={img} />
     </Link>

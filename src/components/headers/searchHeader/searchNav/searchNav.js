@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import SearchBar from './searchBar';
 import ButtonsPanel from './buttonsPanel';
