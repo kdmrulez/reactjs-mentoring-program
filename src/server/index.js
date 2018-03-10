@@ -11,7 +11,7 @@ const fs = require('fs');
 const http = require('http');
 const bodyParser = require('body-parser');
 const { configureStore } = require('../store/configureStore');
-const App = require('../../build/static/js/main.48ae6f00.js').default;
+const App = require('../../build/static/js/main.6bd23c82.js').default;
 
 const staticFiles = [
   '/static/*',
@@ -61,9 +61,11 @@ app.get('*', async (req, res) => {
           { store },
           React.createElement(App),
         );
+        const url = `${req.protocol}://${req.get('host')}${req.originalUrl}`;
+
         const StaticRouterElement = React.createElement(
           StaticRouter,
-          { location: req.url, context },
+          { location: url, context },
           ProviderElement,
         );
         const appMarkup = renderToString(StaticRouterElement);

@@ -35,7 +35,9 @@ const ButtonsPanel = ({
           name="SEARCH"
           buttonStyling={extended}
           action={() => {
+          if (searchBarInput) {
           fetchMoviesByDirector(searchBarInput);
+        }
         }}
         />
       </Link>

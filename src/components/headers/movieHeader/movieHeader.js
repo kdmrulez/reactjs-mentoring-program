@@ -9,29 +9,33 @@ import { extendedReverseColors } from '../../common/buttons/buttons.css';
 import { movieHeader } from '../headers.css';
 import { topRow, container, movieDescription, img } from './MovieHeader.css';
 
-const MovieHeader = ({ movie }) => (
-  <header className={movieHeader}>
-    <section className={topRow}>
-      <SiteTitle />
-      <Link to="/">
-        <Button
-          name="SEARCH"
-          buttonStyling={extendedReverseColors}
-        />
-      </Link>
-    </section>
-    <section className={container}>
-      <img
-        src={movie.imgSrc}
-        className={img}
-        alt="Movie logo"
-      />
-      <section className={movieDescription}>
-        <MovieDescription movie={movie} />
+const basicURL = 'http://localhost:3000';
+const MovieHeader = ({ movie }) => {
+  if (!movie) window.location.replace(basicURL);
+  return (
+    <header className={movieHeader}>
+      <section className={topRow}>
+        <SiteTitle />
+        <Link to="/">
+          <Button
+            name="SEARCH"
+            buttonStyling={extendedReverseColors}
+          />
+        </Link>
       </section>
-    </section>
-  </header>
-);
+      <section className={container}>
+        <img
+          src={movie.imgSrc}
+          className={img}
+          alt="Movie logo"
+        />
+        <section className={movieDescription}>
+          <MovieDescription movie={movie} />
+        </section>
+      </section>
+    </header>
+  );
+};
 
 MovieHeader.propTypes = {
   movie: PropTypes.shape({
