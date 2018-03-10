@@ -11,7 +11,7 @@ const fs = require('fs');
 const http = require('http');
 const bodyParser = require('body-parser');
 const { configureStore } = require('../store/configureStore');
-const App = require('../../build/static/js/main.6bd23c82.js').default;
+const App = require('../../build/static/js/main.79a53f10.js').default;
 
 const staticFiles = [
   '/static/*',
