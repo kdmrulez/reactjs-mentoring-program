@@ -1,0 +1,50 @@
+@value colors: "../common/styles/colors.css";
+@value subNavColor, subNavTextColor, mainColor from colors;
+
+@value sizes: "../common/styles/elements.css";
+@value subNavHeight from sizes;
+
+.subNav {
+  composes: basicContainer from "../common/styles/elements.css";
+  align-items: center;
+  background-color: subNavColor;
+  color: subNavTextColor;
+  font-weight: bold;
+  height: subNavHeight;
+  justify-content: space-between;
+}
+
+.side {
+  background:none;
+  border:none;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list{
+  display: flex;
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+.element {
+  align-self: center;
+  background:none;
+  border:none;
+  cursor: pointer;
+  padding-right: 0.3vw;
+}
+
+.selected {
+  composes: element;
+  color: mainColor;
+}
+
+.element:focus, .selected:focus {
+  outline: 0;
+}

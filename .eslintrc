@@ -1,7 +1,21 @@
 {
+  "parser": "babel-eslint",
   "extends": "airbnb",
+   "plugins": [
+    "flowtype"
+  ],
   "rules": {
+    "linebreak-style": 0,
+    "global-require": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "func-names": ["error", "never"]
+    "func-names": ["error", "never"],
+    "jsx-a11y/anchor-is-valid": [ "error", {
+        "components": [ "Link" ],
+        "specialLink": [ "to", "hrefLeft", "hrefRight" ],
+        "aspects": [ "noHref", "invalidHref", "preferButton" ]
+      }],
+  },
+  "env": {
+    "browser": true
   }
 }

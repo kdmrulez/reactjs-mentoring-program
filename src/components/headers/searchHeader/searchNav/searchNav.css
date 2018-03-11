@@ -1,0 +1,12 @@
+.searchNav {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: white;
+  margin: 1vh 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,25 @@
+.buttonsPanel {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 2vh 0 1vh 0;
+}
+
+.categoriesButtons {
+  align-items: center;
+  display: flex;
+  width: 16vw;
+}
+
+.title {
+  color: white;
+  overflow: hidden;
+  padding-right: 5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.searchButton {
+  composes: categoriesButtons;
+  justify-content: flex-end;
+}

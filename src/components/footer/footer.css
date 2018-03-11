@@ -1,0 +1,15 @@
+@value colors: "../common/styles/colors.css";
+@value footerColor from colors;
+
+@value sizes: "../common/styles/elements.css";
+@value footerHeight from sizes;
+
+.footer {
+  composes: basicContainer from  "../common/styles/elements.css";
+  align-items: center;
+  background: footerColor;
+  bottom: 0;
+  height: footerHeight;
+  left: 0;
+  position: fixed;
+}

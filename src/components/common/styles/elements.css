@@ -1,0 +1,29 @@
+/*COMMON*/
+@value basicFontSize: 1.7vh;
+@value smallFontSize: 1.4vh;
+@value horizontalMargins: 30vw;
+@value containerWidth: 40vw;
+@value horizontalPadding: 4vw;
+@value verticalPadding: 1vh;
+.basicContainer {
+    box-sizing: border-box;
+    display: flex;
+    font-size: basicFontSize;
+    margin: 0 horizontalMargins;
+    padding: verticalPadding horizontalPadding;
+    width: containerWidth;
+}
+
+/*HEADER*/
+@value headerHeight: 20vh;
+
+/*SUBNAV*/
+@value subNavHeight: 5vh;
+
+/*FOOTER*/
+@value footerHeight: 6vh;
+
+/*MOVIEITEMS*/
+@value movieItemsInRow: 3;
+@value itemPadding: 0.5vw;
+@value movieItemHeight: calc((100vh - headerHeight - subNavHeight - footerHeight - 2*itemPadding)/movieItemsInRow);
