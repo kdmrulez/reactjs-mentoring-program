@@ -1,4 +1,4 @@
 // @flow
-import ButtonsPanel from './ButtonsPanel';
+import ButtonsPanel from './buttonsPanel';
 
 export default ButtonsPanel;

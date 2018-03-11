@@ -5,5 +5,5 @@
     "es2015",
     "stage-2"
   ],
-   "plugins": ["transform-async-to-generator"],
+   "plugins": ["transform-async-to-generator","transform-runtime"],
 }

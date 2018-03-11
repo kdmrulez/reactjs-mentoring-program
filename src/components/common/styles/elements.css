@@ -1,5 +1,6 @@
 /*COMMON*/
 @value basicFontSize: 1.7vh;
+@value smallFontSize: 1.4vh;
 @value horizontalMargins: 30vw;
 @value containerWidth: 40vw;
 @value horizontalPadding: 4vw;

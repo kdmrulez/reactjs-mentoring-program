@@ -1,3 +1,3 @@
-import SiteTitle from './SiteTitle';
+import SiteTitle from './siteTitle';
 
 export default SiteTitle;
