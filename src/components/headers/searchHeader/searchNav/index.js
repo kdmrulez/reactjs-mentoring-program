@@ -1,4 +1,4 @@
 // @flow
-import SearchNav from './SearchNav';
+import SearchNav from './searchNav';
 
 export default SearchNav;

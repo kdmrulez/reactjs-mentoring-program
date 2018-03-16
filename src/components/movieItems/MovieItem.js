@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import * as Scroll from 'react-scroll';
 import PropTypes from 'prop-types';
-import MovieItemDetails from './movieItemDetails';
+import MovieItemDetails from './MovieItemDetails';
 import { item, img, imgContainer } from './movieItems.css';
 
 const MovieItem = ({ movie }) => (

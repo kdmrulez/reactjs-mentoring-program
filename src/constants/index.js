@@ -1,3 +1,3 @@
-export { TITLE, DIRECTOR } from './searchBy';
-export { RELEASE_DATE, RATING } from './sortBy';
+export { TITLE, DIRECTOR } from './SearchBy';
+export { RELEASE_DATE, RATING } from './SortBy';
 export { URL, ROOT_IMG_URL, SERVER_URL } from './Api';

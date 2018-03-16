@@ -11,7 +11,10 @@ const fs = require('fs');
 const http = require('http');
 const bodyParser = require('body-parser');
 const { configureStore } = require('../store/configureStore');
-const App = require('../../build/static/js/main.6c843eba.js').default;
+
+const buildFiles = fs.readdirSync('../../build/static/js/');
+// eslint-disable-next-line import/no-dynamic-require
+const App = require(`../../build/static/js/${buildFiles[0]}`).default;
 
 const staticFiles = [
   '/static/*',

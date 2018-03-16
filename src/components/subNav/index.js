@@ -1,3 +1,3 @@
-import SubNav from './SubNav';
+import SubNav from './subNav';
 
 export default SubNav;
